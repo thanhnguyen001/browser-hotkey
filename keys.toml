@@ -1,0 +1,27 @@
+# browser-hotkey key settings — single source of truth.
+# Edit, then run:  ~/workspace/study/tools/browser-hotkey/install.sh
+# Log: ~/.local/share/browser-hotkey.log
+
+[firefox]
+key    = "<Alt>w"   # action key for this browser
+action = "toggle"             # close | minimize | activate | toggle
+# Window picker for THIS browser: press key_window, then 1..9 to open
+# that exact window (only matters when >= 2 windows open).
+key_window = "none"
+
+[google-chrome]
+# smart: 1 window -> toggle; >=2 windows -> picker (press 1-9)
+key    = "<Alt>q"
+action = "smart"
+key_window = "none"
+
+[microsoft-edge]
+key    = "<Ctrl><Shift>e"
+action = "toggle"
+key_window = "<Ctrl><Alt>e"
+
+[switch]
+# Global picker across ALL browsers: press key, then 1..9.
+# Daemon intercepts this too; install.sh will not register it in GNOME.
+key = "<Ctrl><Shift>q"
+timeout = 6   # seconds to wait for the number key (generous; Esc cancels early)

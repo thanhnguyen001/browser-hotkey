@@ -1,0 +1,18 @@
+# browser-hotkey: a unified config for action + switcher scripts
+# Log file: ~/.local/share/browser-hotkey.log
+
+[firefox]
+# action = "close"          # or "minimize"; comment out to use CLI arg
+
+[google-chrome]
+# action = "minimize"
+
+[microsoft-edge]
+# action = "close"
+
+[switch]
+# Which windows the numbered switcher covers:
+#   all | firefox | google-chrome | microsoft-edge
+scope = "all"
+# Seconds to wait for the number key after pressing the prefix
+timeout = 3
